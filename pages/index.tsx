@@ -25,14 +25,18 @@ const Home: NextPage = () => {
           crossOrigin=""
         />
       </Head>
-      <main className="h-screen bg-[#09090B] p-16 text-white">
-        <nav className="flex justify-between content-center">
-          <Image
-            src="/assets/shreya-logo.svg"
-            alt="logo"
-            width="30"
-            height="41"
-          />
+
+      <div className="flex flex-col justify-between content-center h-screen bg-[#09090B] p-8 md:p-16 text-white">
+        <div className="flex justify-between items-center">
+          <div className="h-8 w-8 md:h-10 md:w-10 relative">
+            <Image
+              src="/assets/shreya-logo.svg"
+              alt="logo"
+              layout="fill"
+              className="absolute"
+            />
+          </div>
+
           <div className="flex flex-row gap-14 cursor-pointer font-['SofiaPro']">
             <Link href="./projects">
               <a>Projects</a>
@@ -41,60 +45,49 @@ const Home: NextPage = () => {
               <a>My Story</a>
             </Link>
           </div>
-        </nav>
-        <div className="flex flex-col">
-          <div className="mt-28 font-medium font-['SofiaPro']">
-            <h2 className="text-2xl">
-              Hey There, I&apos;m{" "}
-              <span className="text-[#F291BB] ">Shreya</span>
-            </h2>
-            <h1 className="text-6xl">
-              An experienced pokemon <br /> trainer
-            </h1>
-            <a href="https://www.buymeacoffee.com/stabjul">
-              <button className="bg-[#D14A84] text-white rounded-md mt-5 p-2 cursor-pointer">
-                Ask me how
-              </button>
-            </a>
-          </div>
-          <div className="flex flex-row justify-between content-center space-x-96">
-            <div className="flex flex-row gap-5 mt-52 cursor-pointer">
-              <a href="https://github.com/stabjul">
-                <Image
-                  src="/assets/github.svg"
-                  alt="github icon"
-                  width="27"
-                  height="27"
-                />
-              </a>
-              <a href="https://www.linkedin.com/in/shreya-tabjul-4050821b1/">
-                <Image
-                  src="/assets/linkedin.svg"
-                  alt="linkedin icon"
-                  width="27"
-                  height="27"
-                />
-              </a>
-              <a href="mailto:stabjul@gmail.com" className="-mt-0.5">
-                <Image
-                  src="/assets/mail.svg"
-                  alt="email icon"
-                  width="34"
-                  height="34"
-                />
-              </a>
-              <div className="pl-96 ml-40 mt-3">
-                <Image
-                  src="/assets/down.svg"
-                  alt="design icon"
-                  width="25"
-                  height="25"
-                />
-              </div>
-            </div>
-          </div>
         </div>
-      </main>
+
+        <div className="font-medium font-['SofiaPro']">
+          <h2 className="text-2xl md:text-3xl">
+            Hey There, I&apos;m <span className="text-[#F291BB] ">Shreya</span>
+          </h2>
+          <h1 className="text-5xl md:text-6xl">
+            An experienced web <br /> developer
+          </h1>
+          <a href="https://www.buymeacoffee.com/stabjul">
+            <button className="bg-[#D14A84] text-white rounded-md mt-5 p-2 cursor-pointer">
+              Ask me how
+            </button>
+          </a>
+        </div>
+
+        <div className="flex flex-row content-center gap-5 cursor-pointer">
+          <a href="https://github.com/stabjul">
+            <Image
+              src="/assets/github.svg"
+              alt="github icon"
+              width="27"
+              height="27"
+            />
+          </a>
+          <a href="https://www.linkedin.com/in/shreya-tabjul-4050821b1/">
+            <Image
+              src="/assets/linkedin.svg"
+              alt="linkedin icon"
+              width="27"
+              height="27"
+            />
+          </a>
+          <a href="mailto:stabjul@gmail.com" className="-mt-0.5">
+            <Image
+              src="/assets/mail.svg"
+              alt="email icon"
+              width="34"
+              height="34"
+            />
+          </a>
+        </div>
+      </div>
     </div>
   );
 };

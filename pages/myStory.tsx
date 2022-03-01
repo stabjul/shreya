@@ -16,15 +16,17 @@ const MyStory = () => {
   };
   const { View } = useLottie(options);
   return (
-    <div className="h-screen bg-[#09090B] flex flex-col">
+    <div className="h-screen bg-[#09090B] flex flex-col p-16">
       <Link href="/">
-        <a className="m-10">
-          <Image
-            src="/assets/shreya-logo.svg"
-            alt="logo"
-            width={30}
-            height={41}
-          />
+        <a>
+          <div className="h-8 w-8 md:h-10 md:w-10 relative">
+            <Image
+              src="/assets/shreya-logo.svg"
+              alt="logo"
+              layout="fill"
+              className="absolute"
+            />
+          </div>
         </a>
       </Link>
       <div className="flex flex-row justify-center items-center">
