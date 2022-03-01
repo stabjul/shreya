@@ -37,7 +37,7 @@ const Home: NextPage = () => {
             />
           </div>
 
-          <div className="flex flex-row gap-14 cursor-pointer font-['SofiaPro']">
+          <div className="flex flex-row gap-10 md:gap-14 cursor-pointer font-['SofiaPro']">
             <Link href="./projects">
               <a>Projects</a>
             </Link>
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
           <h2 className="text-2xl md:text-3xl">
             Hey There, I&apos;m <span className="text-[#F291BB] ">Shreya</span>
           </h2>
-          <h1 className="text-5xl md:text-6xl">
+          <h1 className="text-5xl md:text-6xl mt-6">
             An experienced web <br /> developer
           </h1>
           <a href="https://www.buymeacoffee.com/stabjul">
