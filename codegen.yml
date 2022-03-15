@@ -1,0 +1,26 @@
+overwrite: true
+schema: 
+  - ${NEXT_PUBLIC_GRAPHCMS_URL}:
+      headers:
+        authorization: 'Bearer ${NEXT_PUBLIC_GRAPHCMS_GRAPHQL_API_TOKEN}'
+documents: "graphql/**/*.graphql"
+generates:
+  graphql/generated.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-resolvers"
+      - "typescript-react-apollo"
+      - "fragment-matcher"
+  graphql/generated-ssr.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-resolvers"
+      - "typescript-graphql-request"
+      - "fragment-matcher"
+    config:
+      rawRequest: true
+  ./graphql.schema.json:
+    plugins:
+      - "introspection"

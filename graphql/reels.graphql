@@ -1,0 +1,37 @@
+fragment Reel on Reel {
+  title
+  description
+  slug
+  id
+  mp4 {
+    id
+    url
+  }
+  youtubeUrl {
+    id
+    url
+  }
+  instagramUrl {
+    url
+  }
+  publishedAt
+  createdBy {
+    id
+  }
+  tags
+  thumbnail {
+    url
+  }
+}
+
+query GetReels {
+  reels {
+    ...Reel
+  }
+}
+
+query GetReel($slug: String!) {
+  reel(where: { slug: $slug }) {
+    ...Reel
+  }
+}
